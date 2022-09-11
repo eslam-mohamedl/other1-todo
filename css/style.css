@@ -1,0 +1,248 @@
+/*start variable*/
+:root{
+    --first-color: #069C54;
+    --first-color-alt: #048654;
+    --title-color: #393939;
+    --text-color: #707070;
+    --text-color-light: #A6A6A6;
+    --body-color: #FBFEFD;
+    --container-color: #FFFFFF;
+    --main-color: lightseagreen;
+    --transition: all 0.5s ease;
+   }
+/*end variable */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+} 
+body{
+    font-family: "open sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+ul,
+li{
+    list-style:none;
+}
+.container{
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/*small screen*/
+@media (min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/*medium screen*/
+@media (min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+/*large screen*/
+@media (min-width:1100px){
+    .container{
+        width: 620px;
+        margin: 0 auto;
+    }
+ 
+}
+header{
+    background-image: url(../img/7.jpg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+header .overlay{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+header .overlay .box-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: white;
+    max-height: 55px;
+    background-color:var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header .overlay .logo {
+
+    padding: 0 110px;
+
+}
+header .overlay .logo span{
+    font-size: 26px;
+    margin-left: 5px;
+}
+header .overlay .logo i{
+    font-size: 24px;
+}
+
+header .overlay .box-container ul {
+    padding: 0 110px;
+
+}
+header .overlay .box-container ul li{
+    padding: px 0;
+
+}
+header .overlay .box-container ul li:hover{
+    border-bottom: 2px solid #fff;
+}
+header .overlay .box-container ul li{
+  display: inline-block;
+}
+
+header .overlay .box-container ul li a{
+    color: white;
+    margin-right: 23px;
+    font-size: 18px;
+    text-transform: capitalize;}
+
+    header .heading{
+        padding-top: 75px;
+        text-align: center;
+        color: white;
+        text-transform: capitalize;
+        font-size: 22px;
+        letter-spacing: 6px;
+        
+    }
+    header .heading span{
+        color: var(--main-color);
+    }
+    .task-container .add-tasks{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        .task-container .add-tasks input{
+            height: 45px;
+            border: none;
+            border-radius: 7px;
+            text-indent: 22px;
+            text-transform: capitalize;
+            width: 0%;
+            transition: width 0.7s;
+            } 
+    
+            .task-container .add-tasks .box-plus:hover{
+             cursor: pointer;
+             transform: scale(1.2) rotate(360deg);
+            }
+
+    .task-container .add-tasks i{
+        color: white;
+    }
+    .task-container .add-tasks input:focus{
+        outline: none;
+    } 
+     .task-container .add-tasks .box-plus{
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height:45px;
+        background: var(--main-color);
+        border-radius: 50%;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s;
+    }
+    .task-container .add-tasks span{
+    font-size: 34px;
+    color: white;
+    }
+    .content-task {
+        background: rgba(236,222,222,0.5);
+        width: 100%;
+        height: auto;
+        margin: 2px 0 0 0 ;
+        border-radius: 12px;
+        padding: 20px 0;
+        
+    }
+    .content-task .tast-box{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 5px 20px;
+    background-color: white;
+    color: var(--title-color);
+    font-weight: normal;
+    padding: 10px 10px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    
+    
+    }
+    .content-task .finshed{
+        text-decoration: line-through;
+       
+    
+    }
+    .content-task .tast-box .delete{
+        background: var(--main-color);
+        padding: 3px 7px;
+        color: white;
+        border-radius: 2px;
+        font-size: 10px;
+        text-decoration: none;
+        
+    }
+    .content-task .tast-box .delete:hover{
+        cursor: pointer;
+    }
+
+    .task-container .task-stats{
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 20px;
+            margin-top: 20px;
+
+    }
+    .task-container .task-stats .task-count,
+     .task-container .task-stats .task-complate{
+        background: rgba(236,222,222,0.7);
+
+        padding: 4px 10px;
+        border-radius: 4px;
+
+    }
+    .visiable-box{
+        display: none;
+        transition: 10s;
+    }
+@media (max-width:768px)  and (min-width:200px)  {
+    
+    .link{
+        display: none;
+    }
+
+}
